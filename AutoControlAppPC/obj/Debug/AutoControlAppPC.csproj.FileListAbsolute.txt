@@ -1,0 +1,9 @@
+E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\bin\Debug\AutoControlAppPC.exe.config
+E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\bin\Debug\AutoControlAppPC.exe
+E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\bin\Debug\AutoControlAppPC.pdb
+E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\obj\Debug\AutoControlAppPC.csprojResolveAssemblyReference.cache
+E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\obj\Debug\AutoControlAppPC.Form1.resources
+E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\obj\Debug\AutoControlAppPC.Properties.Resources.resources
+E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\obj\Debug\AutoControlAppPC.csproj.GenerateResource.Cache
+E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\obj\Debug\AutoControlAppPC.exe
+E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\obj\Debug\AutoControlAppPC.pdb
