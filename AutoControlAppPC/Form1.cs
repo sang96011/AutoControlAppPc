@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KAutoHelper;
 
 namespace AutoControlAppPC
 {
@@ -33,7 +34,7 @@ namespace AutoControlAppPC
         {
             string strCmdText;
             strCmdText = "/C ping -t howkteam.com";
-            Process.Start("CMD.exe",strCmdText);
+            Process.Start("CMD.exe", strCmdText);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -89,5 +90,80 @@ namespace AutoControlAppPC
             string result = cmd.StandardOutput.ReadToEnd();
             MessageBox.Show(result);
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int x = (int)numericUpDown1.Value;
+            int y = (int)numericUpDown2.Value;
+
+            EMouseKey mouseKey = EMouseKey.LEFT;
+
+            if (checkBox1.Checked)
+            {
+                if (checkBox2.Checked)
+                {
+                    mouseKey = EMouseKey.DOUBLE_RIGHT;
+                }
+                else
+                {
+                    mouseKey = EMouseKey.RIGHT;
+                }
+            }
+            else
+            {
+                if (checkBox2.Checked)
+                {
+                    mouseKey = EMouseKey.DOUBLE_LEFT;
+                }
+                    
+            }
+
+
+            // Cursor.Position = new Point(x, y);
+            AutoControl.MouseClick(x, y, mouseKey);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            int x = (int)numericUpDown1.Value;
+            int y = (int)numericUpDown2.Value;
+
+            //var hWnd = Process.GetProcessById(12012).MainWindowHandle;
+            //var hWnd = Process.GetProcessesByName("Remote Desktop Connection")[0].MainWindowHandle;
+            IntPtr hWnd = IntPtr.Zero;
+
+            hWnd = AutoControl.FindWindowHandle(null, textBox1.Text);
+
+            // lấy ra tọa độ trên màn hình của tọa độ bên trong cửa sổ. Use Autoit window info
+            var pointToClick = AutoControl.GetGlobalPoint(hWnd, x, y);
+
+            EMouseKey mouseKey = EMouseKey.LEFT;
+
+            if (checkBox1.Checked)
+            {
+                if (checkBox2.Checked)
+                {
+                    mouseKey = EMouseKey.DOUBLE_RIGHT;
+                }
+                else
+                {
+                    mouseKey = EMouseKey.RIGHT;
+                }
+            }
+            else
+            {
+                if (checkBox2.Checked)
+                {
+                    mouseKey = EMouseKey.DOUBLE_LEFT;
+                }
+
+            }
+
+            AutoControl.BringToFront(hWnd);
+
+            // Cursor.Position = new Point(x, y);
+            AutoControl.MouseClick(pointToClick, mouseKey);
+        }
+
     }
 }

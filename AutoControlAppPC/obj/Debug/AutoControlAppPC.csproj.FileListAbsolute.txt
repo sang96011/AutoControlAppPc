@@ -6,3 +6,4 @@ E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\obj\Debug\AutoControlAppPC.Pr
 E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\obj\Debug\AutoControlAppPC.csproj.GenerateResource.Cache
 E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\obj\Debug\AutoControlAppPC.exe
 E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\obj\Debug\AutoControlAppPC.pdb
+E:\Coding\csharp\AutoControlAppPC\AutoControlAppPC\bin\Debug\KAutoHelper.dll
