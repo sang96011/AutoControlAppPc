@@ -221,5 +221,16 @@ namespace AutoControlAppPC
             AutoControl.SendMultiKeysFocus(new KeyCode[] { KeyCode.CONTROL, KeyCode.KEY_V });
             AutoControl.SendKeyFocus(KeyCode.ENTER);
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            IntPtr hWnd = IntPtr.Zero;
+            hWnd = AutoControl.FindWindowHandle(null, textBox1.Text);
+            
+            AutoControl.SendText(hWnd, "VSN ...");
+
+            var childhWnd = AutoControl.FindHandle(hWnd, "ComboBoxEx32", null);
+            AutoControl.SendText(childhWnd, "gnassang.wap.sh");
+        }
     }
 }
