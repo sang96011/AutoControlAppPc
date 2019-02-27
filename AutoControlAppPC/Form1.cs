@@ -165,5 +165,50 @@ namespace AutoControlAppPC
             AutoControl.MouseClick(pointToClick, mouseKey);
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            int x = (int)numericUpDown1.Value;
+            int y = (int)numericUpDown2.Value;
+
+            IntPtr hWnd = IntPtr.Zero;
+
+            hWnd = AutoControl.FindWindowHandle(null, textBox1.Text);
+
+            var childhWnd = IntPtr.Zero;
+            // Tìm ra handle con mà thỏa điều kiện text và class y chang
+            //childhWnd = AutoControl.FindWindowExFromParent(hWnd, null, textBox2.Text);
+
+            //Tìm ra handle con mà thỏa text hoặc class giống
+            childhWnd = AutoControl.FindHandle(hWnd, textBox2.Text, textBox2.Text);
+
+            // lấy ra tọa độ trên màn hình của tọa độ bên trong cửa sổ. Use Autoit window info
+            var pointToClick = AutoControl.GetGlobalPoint(childhWnd, x, y);
+
+            EMouseKey mouseKey = EMouseKey.LEFT;
+
+            if (checkBox1.Checked)
+            {
+                if (checkBox2.Checked)
+                {
+                    mouseKey = EMouseKey.DOUBLE_RIGHT;
+                }
+                else
+                {
+                    mouseKey = EMouseKey.RIGHT;
+                }
+            }
+            else
+            {
+                if (checkBox2.Checked)
+                {
+                    mouseKey = EMouseKey.DOUBLE_LEFT;
+                }
+
+            }
+
+            AutoControl.BringToFront(hWnd);
+
+            AutoControl.MouseClick(pointToClick, mouseKey);
+        }
     }
 }
