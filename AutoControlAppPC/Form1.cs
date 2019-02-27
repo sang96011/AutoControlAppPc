@@ -232,5 +232,18 @@ namespace AutoControlAppPC
             var childhWnd = AutoControl.FindHandle(hWnd, "ComboBoxEx32", null);
             AutoControl.SendText(childhWnd, "gnassang.wap.sh");
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            IntPtr hWnd = IntPtr.Zero;
+            hWnd = AutoControl.FindWindowHandle(null, textBox1.Text);
+            var childhWnd = AutoControl.FindHandle(hWnd, textBox2.Text, textBox2.Text);
+            AutoControl.SendClickOnControlByHandle(childhWnd);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Process.Start("mstsc.exe");
+        }
     }
 }

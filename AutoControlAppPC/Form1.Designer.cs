@@ -47,6 +47,8 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
@@ -224,26 +226,48 @@
             this.button10.Enabled = false;
             this.button10.Location = new System.Drawing.Point(12, 184);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(436, 23);
+            this.button10.Size = new System.Drawing.Size(439, 23);
             this.button10.TabIndex = 17;
             this.button10.Text = "Không chiếm chuột và bàn phím";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(13, 214);
+            this.button11.Location = new System.Drawing.Point(12, 214);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(120, 23);
+            this.button11.Size = new System.Drawing.Size(121, 23);
             this.button11.TabIndex = 18;
             this.button11.Text = "Sửa tiêu đề ứng dụng";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(12, 243);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(121, 23);
+            this.button12.TabIndex = 19;
+            this.button12.Text = "Click control ứng dụng";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(197, 12);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(138, 23);
+            this.button13.TabIndex = 20;
+            this.button13.Text = "Open \"Remote Control\"";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 259);
+            this.ClientSize = new System.Drawing.Size(460, 340);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
@@ -293,6 +317,8 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
     }
 }
 
