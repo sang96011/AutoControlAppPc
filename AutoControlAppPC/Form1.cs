@@ -245,5 +245,34 @@ namespace AutoControlAppPC
         {
             Process.Start("mstsc.exe");
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            IntPtr hWnd = IntPtr.Zero;
+            hWnd = AutoControl.FindWindowHandle(null, textBox1.Text);
+
+            var childhWnd = AutoControl.FindHandle(hWnd, textBox2.Text, textBox2.Text);
+
+            int x = (int)numericUpDown1.Value;
+            int y = (int)numericUpDown2.Value;
+
+            // Phải click vào handle con. Không thể click vào handle window
+            // Không phải ứng dụng nào cũng click được.
+            AutoControl.SendClickOnPosition(childhWnd,x,y);
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            IntPtr hWnd = IntPtr.Zero;
+            hWnd = AutoControl.FindWindowHandle(null, textBox1.Text);
+            AutoControl.SendKeyBoardPress(hWnd, VKeys.VK_RETURN);
+            /*
+             * Bài tập:
+             Nhấn vào combobox -> gửi phím down để chọn ip kế tiếp
+             Phải chạy ngầm hết             
+             */
+
+        }
+
     }
 }
