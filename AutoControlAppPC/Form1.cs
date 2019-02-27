@@ -274,5 +274,36 @@ namespace AutoControlAppPC
 
         }
 
+        private void button16_Click(object sender, EventArgs e)
+        {
+            var screen = CaptureHelper.CaptureScreen();
+            screen.Save("mainScreen.PNG");
+
+            var subBitmap = ImageScanOpenCV.GetImage("template.PNG");
+
+            var resBitmap = ImageScanOpenCV.Find((Bitmap)screen, subBitmap);
+            if (resBitmap != null)
+            {
+                resBitmap.Save("res.PNG");
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            var screen = CaptureHelper.CaptureScreen();
+            screen.Save("mainScreen.PNG");
+
+            var subBitmap = ImageScanOpenCV.GetImage("template.PNG");
+
+            var resBitmap = ImageScanOpenCV.FindOutPoint((Bitmap)screen, subBitmap);
+            if (resBitmap != null)
+            {
+                MessageBox.Show(resBitmap.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Not Found");
+            }
+        }
     }
 }

@@ -51,6 +51,9 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
@@ -151,21 +154,21 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(323, 67);
+            this.button6.Location = new System.Drawing.Point(320, 272);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(128, 23);
             this.button6.TabIndex = 9;
-            this.button6.Text = "Click tạo độ màn hình";
+            this.button6.Text = "Click toạ độ màn hình";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(323, 96);
+            this.button7.Location = new System.Drawing.Point(320, 185);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(128, 23);
             this.button7.TabIndex = 10;
-            this.button7.Text = "Click tạo độ ứng dụng";
+            this.button7.Text = "Click toạ độ ứng dụng";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -205,7 +208,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(323, 125);
+            this.button8.Location = new System.Drawing.Point(320, 214);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(128, 23);
             this.button8.TabIndex = 13;
@@ -215,7 +218,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(323, 154);
+            this.button9.Location = new System.Drawing.Point(320, 243);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(128, 23);
             this.button9.TabIndex = 16;
@@ -225,17 +228,16 @@
             // 
             // button10
             // 
-            this.button10.Enabled = false;
-            this.button10.Location = new System.Drawing.Point(12, 184);
+            this.button10.Location = new System.Drawing.Point(12, 156);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(439, 23);
+            this.button10.Size = new System.Drawing.Size(212, 23);
             this.button10.TabIndex = 17;
             this.button10.Text = "Không chiếm chuột và bàn phím";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(12, 214);
+            this.button11.Location = new System.Drawing.Point(12, 330);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(121, 23);
             this.button11.TabIndex = 18;
@@ -245,7 +247,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(12, 243);
+            this.button12.Location = new System.Drawing.Point(12, 214);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(121, 23);
             this.button12.TabIndex = 19;
@@ -265,7 +267,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(12, 272);
+            this.button14.Location = new System.Drawing.Point(12, 185);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(121, 23);
             this.button14.TabIndex = 21;
@@ -275,7 +277,7 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(12, 301);
+            this.button15.Location = new System.Drawing.Point(11, 243);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(121, 23);
             this.button15.TabIndex = 22;
@@ -283,11 +285,43 @@
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(11, 272);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(121, 23);
+            this.button16.TabIndex = 23;
+            this.button16.Text = "Search Image";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(11, 301);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(121, 23);
+            this.button17.TabIndex = 24;
+            this.button17.Text = "Lấy toạ độ Image";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(240, 156);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(212, 23);
+            this.button18.TabIndex = 25;
+            this.button18.Text = "Chiếm chuột và bàn phím";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 340);
+            this.ClientSize = new System.Drawing.Size(460, 364);
+            this.Controls.Add(this.button18);
+            this.Controls.Add(this.button17);
+            this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
@@ -311,6 +345,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -345,6 +380,9 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
     }
 }
 
