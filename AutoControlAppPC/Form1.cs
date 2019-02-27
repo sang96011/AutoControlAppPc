@@ -210,5 +210,16 @@ namespace AutoControlAppPC
 
             AutoControl.MouseClick(pointToClick, mouseKey);
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            IntPtr hWnd = IntPtr.Zero;
+            hWnd = AutoControl.FindWindowHandle(null, textBox1.Text);
+
+            AutoControl.BringToFront(hWnd);
+            
+            AutoControl.SendMultiKeysFocus(new KeyCode[] { KeyCode.CONTROL, KeyCode.KEY_V });
+            AutoControl.SendKeyFocus(KeyCode.ENTER);
+        }
     }
 }
